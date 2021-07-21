@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client(); //discord client to connect to discord server
-const Database = require("@replit/database")
-const db = new Database()
 
 const mySecret = process.env['TOKEN']
 
