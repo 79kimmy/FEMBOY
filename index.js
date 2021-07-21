@@ -37,7 +37,7 @@ client.on("message", message => {
 
   //help
   if(message.content === "!help"){
-    message.reply("\n\nCommands:\n!bang\n!coin\n!doin\n!greece\n!learn\n!mental\n!mc\n!pfp\n!roll\n!sneed\n!t");
+    message.reply("\n\nCommands:\n!bang\n!coin\n!doin\n!greece\n!learn\n!mental\n!mc\n!roll\n!sneed\n!t");
   }
 
   //kick if no message from user for three days after joining
@@ -48,6 +48,7 @@ client.on("message", message => {
   //urban dictionary definition
   //currency converter
   //moderator add new command, !newcommand <command name> <command text>
+  //pfp with args
 
   //bang
   if(message.content === "!bang"){
@@ -100,20 +101,6 @@ client.on("message", message => {
   //minecraft
   if(message.content === "!mc"){
       message.reply("\nKira's Server Address: https://k1ra.net/\n\nKiara's Mods: <https://mega.nz/file/KjpzDKoS#Kpq-v-ft6Xa1jngxo7i7Mlcc_5i-jBEkmo0fWWQIUVM>\nKiara's Server Address: yuuko.kyoko.pw:31210");
-  }
-
-  //pfp
-  if(message.content.startsWith("!pfp")){
-    const value = message.content.split("!pfp ")[1]
-    // const args = message.content.slice("!pfp ")[1]
-    console.log(value)
-    //  if(message.content === "!pfp"){}
-   
-      let member = message.author || message.mentions.users.first();
-      console.log(member)
-      let avatar = member.displayAvatarURL({ format: 'png', dynamic: true, size: 1024 });
-      const embed = new Discord.MessageEmbed().setTitle(`${member.username}'s avatar`).setImage(avatar).setColor("#F5C8CE");
-      message.reply(embed).catch(err => console.log(err));
   }
 
   //roll
